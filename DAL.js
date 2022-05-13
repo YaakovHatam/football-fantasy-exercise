@@ -5,6 +5,15 @@ function read(type) {
     return JSON.parse(fs.readFileSync(`./data/${type}s.json`, 'utf-8'));
 }
 
+function readOneByQuery(type, filterFunc) {
+    return read(type).find(filterFunc);
+}
+
+function readByQuery(type, filterFunc) {
+    return read(type).filter(filterFunc);
+}
+
+
 function readOne(type, id) {
     return read(type).find(p => p.id == id);
 }
@@ -33,6 +42,8 @@ function add(type, entity) {
 module.exports = {
     add,
     read,
+    readByQuery,
+    readOneByQuery,
     readOne,
     update
 }

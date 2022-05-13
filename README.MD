@@ -10,9 +10,9 @@
 - `application/json`: JSON content type
 
 ### Parameters - Content
-- `body`: `POST`, `PUT`
-- `querystring`: `POST`, `PUT`, `GET`, `DELETE` (ex: http://example.com/api/a?par1=1&par2=2)
-- `params`: inside url segment `POST`, `PUT`, `GET`, `DELETE` (ex: http://example.com/api/a/1)
+- `body` (req.body): `POST`, `PUT`
+- `querystring` (req.query): `POST`, `PUT`, `GET`, `DELETE` (ex: http://example.com/api/a?par1=1&par2=2) 
+- `params` (req.params): inside url segment `POST`, `PUT`, `GET`, `DELETE` (ex: http://example.com/api/a/1)
 
 ### HTTP Status
 #### Success statuses
@@ -21,6 +21,7 @@
 - `204`: `delete`
 
 ## Data Access Layer - DAL
+
 
 
 To join the game select a fantasy football squad of 15 players, consisting of:
